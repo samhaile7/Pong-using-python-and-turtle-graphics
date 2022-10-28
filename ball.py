@@ -7,8 +7,9 @@ class Ball(Turtle):
         self.shape("circle")
         self.goto(280, random.randint(-280,280))
 
-    def bounce(self, heading):
+    def bounce(self):
         if self.xcor() > 0:
-            self.goto(280, random.randint(-280, 280))
+            self.goto(-280, random.randint(-280, 280))
         elif self.xcor() < 0:
+            self.goto(280, random.randint(-280, 280))
 
