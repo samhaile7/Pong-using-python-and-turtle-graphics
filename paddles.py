@@ -6,8 +6,9 @@ class Paddle(Turtle):
         super().__init__()
         self.player = player_num
         self.segments = []
+        self.start_pos()
     def start_pos(self):
-        if player_num == 1:
+        if self.player == 1:
             xcor = -270
             ycor = 10
             for part in range(3):
