@@ -6,11 +6,11 @@ class Ball(Turtle):
         super().__init__()
         self.shape("circle")
         self.speed(1)
-        self.goto(280, random.randint(-280,280))
+
 
     def bounce(self):
         if self.xcor() > 0:
             self.goto(-280, random.randint(-280, 280))
-        elif self.xcor() < 0:
+        elif self.xcor() <= 0:
             self.goto(280, random.randint(-280, 280))
 

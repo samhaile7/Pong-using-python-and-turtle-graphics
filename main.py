@@ -1,3 +1,4 @@
+import turtle
 from turtle import Screen, Turtle
 from scoreboard import Dash_line, Scoreboard
 from  ball import Ball
@@ -14,7 +15,16 @@ player1 = Paddle(1)
 player2 = Paddle(2)
 line = Dash_line()
 ball = Ball()
-player1.move_up()
+
+turtle.listen()
+screen.onkeypress(player1.move_up, "w")
+screen.onkeypress(player1.move_down, "s")
+screen.onkeypress(player2.move_up, "Up")
+screen.onkeypress(player2.move_down, "Down")
+
+
+
+
 
 
 

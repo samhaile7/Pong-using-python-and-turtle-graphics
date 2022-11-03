@@ -25,8 +25,15 @@ class Paddle(Turtle):
             ycor -= 10
 
     def move_up(self):
+
         for seg in self.segments:
             new_y = seg.ycor() + 30
+            seg.goto(seg.xcor(), new_y)
+
+    def move_down(self):
+
+        for seg in self.segments:
+            new_y = seg.ycor() - 30
             seg.goto(seg.xcor(), new_y)
 
 
