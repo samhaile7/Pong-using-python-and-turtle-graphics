@@ -9,6 +9,7 @@ class Dash_line(Turtle):
 
     def draw_line(self):
         self.penup()
+        self.speed(10)
         self.goto((0, 300))
         self.hideturtle()
         self.right(90)
