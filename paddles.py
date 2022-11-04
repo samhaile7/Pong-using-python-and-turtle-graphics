@@ -6,6 +6,7 @@ class Paddle(Turtle):
         super().__init__()
         self.player = player_num
         self.segments = []
+
         self.start_pos()
 
     def start_pos(self):
@@ -23,16 +24,19 @@ class Paddle(Turtle):
             seg1.goto(xcor,ycor)
             self.segments.append(seg1)
             ycor -= 10
+        self.head = self.segments[0]
 
     def move_up(self):
 
         for seg in self.segments:
+
             new_y = seg.ycor() + 30
             seg.goto(seg.xcor(), new_y)
 
     def move_down(self):
 
         for seg in self.segments:
+
             new_y = seg.ycor() - 30
             seg.goto(seg.xcor(), new_y)
 
