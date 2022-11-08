@@ -35,7 +35,7 @@ game_is_on = True
 
 while game_is_on:
     ball.move()
-    if ball.xcor() == -270 and player1.head.ycor() == ball.ycor():
+    if ball.xcor() == -270 and ball.ycor() <= player1.head.ycor() and ball.ycor() >= player1.tail.ycor(): # DUPLICATE FOR PLKAYER 2
         ball.bounce_right()
     elif ball.xcor() == 270 and player2.head.ycor() == ball.ycor():
         ball.bounce_left()

@@ -25,6 +25,7 @@ class Paddle(Turtle):
             self.segments.append(seg1)
             ycor -= 10
         self.head = self.segments[0]
+        self.tail = self.segments[10]
 
     def move_up(self):
 
