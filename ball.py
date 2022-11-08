@@ -21,10 +21,13 @@ class Ball(Turtle):
 
 
     def bounce_left(self):
-        self.goto(-280, random.randint(-280, 280))
+        #self.goto(-280, random.randint(-280, 280))
+        self.setheading(random.randint(90, 270))
 
     def bounce_right(self):
-        self.goto(280, random.randint(-280, 280))
+        #self.goto(280, random.randint(-280, 280))
+        heading = [random.randint(0, 90), random.randint(270, 360)]
+        self.setheading(random.choice(heading))
 
     def reset(self):
         self.goto(0,0)

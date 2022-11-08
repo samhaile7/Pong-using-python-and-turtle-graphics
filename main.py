@@ -37,7 +37,7 @@ while game_is_on:
     ball.move()
     if ball.xcor() == -270 and ball.ycor() <= player1.head.ycor() and ball.ycor() >= player1.tail.ycor(): # DUPLICATE FOR PLKAYER 2
         ball.bounce_right()
-    elif ball.xcor() == 270 and player2.head.ycor() == ball.ycor():
+    elif ball.xcor() == 270 and ball.ycor() <= player2.head.ycor() and ball.ycor() >= player2.tail.ycor():
         ball.bounce_left()
     elif ball.xcor() == -280:
         player1score.update_score()

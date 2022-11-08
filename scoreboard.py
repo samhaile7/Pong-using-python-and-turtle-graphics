@@ -33,7 +33,9 @@ class Scoreboard(Turtle):
         self.write(f'{self.score}', font=('Arial', 30, 'normal'))
 
     def update_score(self):
+        self.clear()
         self.score += 1
+        self.write(f'{self.score}', font=('Arial', 30, 'normal'))
 
 
 
