@@ -17,7 +17,7 @@ class Ball(Turtle):
     #         self.goto(280, random.randint(-280, 280))
 
     def move(self):
-        self.forward(0.5)
+        self.forward(5)
 
 
     def bounce_left(self):
@@ -34,18 +34,18 @@ class Ball(Turtle):
 
 
     def bounce_top(self):
-        if self.heading > 90 and self.heading() < 270:
-            self.setheading(random.randint(181,269))
+        if self.heading() > 90 and self.heading() < 270:
+            self.setheading(random.randint(181,220))
             self.move()
 
 
-        elif self.heading < 90 and self.heading() >= 0:
-            self.setheading(random.randint(271,359))
+        elif self.heading() < 90 and self.heading() >= 0:
+            self.setheading(random.randint(291,359))
             self.move()
 
 
-        elif self.heading > 270 and self.heading < 360:
-            self.setheading(random.randint(271, 359))
+        elif self.heading() > 270 and self.heading() < 360:
+            self.setheading(random.randint(291, 359))
             self.move()
 
 
@@ -54,15 +54,15 @@ class Ball(Turtle):
 
 
     def bounce_bottom(self):
-        if self.heading > 90 and self.heading() < 270:
-            self.setheading(random.randint(91, 181))
+        if self.heading() > 90 and self.heading() < 270:
+            self.setheading(random.randint(110, 181))
             self.move()
 
-        elif self.heading < 90 and self.heading() >= 0:
+        elif self.heading() < 90 and self.heading() >= 0:
             self.setheading(random.randint(1, 89))
             self.move()
 
-        elif self.heading > 270 and self.heading < 360:
+        elif self.heading() > 270 and self.heading() < 360:
             self.setheading(random.randint(1, 89))
             self.move()
 
