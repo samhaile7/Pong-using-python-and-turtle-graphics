@@ -29,39 +29,45 @@ screen.onkeypress(player1.move_down, "s")
 screen.onkeypress(player2.move_up, "Up")
 screen.onkeypress(player2.move_down, "Down")
 #screen.onkeypress(keep_playing, "space")
-# screen.onkeypress(end_game(), "e")
+#screen.onkeypress(end_game(), "e")
 
 game_is_on = True
 
 while game_is_on:
+    screen.update()
     ball.move()
-    if ball.xcor() == -270 and ball.ycor() <= player1.head.ycor() and ball.ycor() >= player1.tail.ycor(): # DUPLICATE FOR PLKAYER 2
+
+
+
+
+
+
+    if -280 < ball.xcor() < -260 and ball.ycor() <= player1.head.ycor() and ball.ycor() >= player1.tail.ycor(): # DUPLICATE FOR PLKAYER 2
         ball.bounce_right()
-    elif ball.xcor() == 270 and ball.ycor() <= player2.head.ycor() and ball.ycor() >= player2.tail.ycor():
+
+    elif 250 < ball.xcor() < 280 and ball.ycor() <= player2.head.ycor() and ball.ycor() >= player2.tail.ycor():
         ball.bounce_left()
-    elif ball.xcor() == -280:
+        ball.color("red")
+
+
+
+    if -260 < ball.xcor() < 260 and 260 < ball.ycor() < 270:
+            ball.bounce_top()
+
+    if -260 < ball.xcor() < 260 and -270 < ball.ycor() < -260:
+            ball.bounce_bottom()
+
+    if ball.xcor() == -280:
         player1score.update_score()
         ball.reset()
         game_is_on = False
 
-
-    elif ball.xcor() == 280:
+    if ball.xcor() == 280:
         player2score.update_score()
         ball.reset()
         game_is_on = False
-
-
-
-
-
-
-
-
-
-
-
-
-
+    else:
+        continue
 
 
 
